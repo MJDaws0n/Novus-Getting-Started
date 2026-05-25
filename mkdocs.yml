@@ -1,0 +1,75 @@
+site_name: Novus Getting Started
+site_description: A detailed guide to Novus, Nox, the standard library, and real Novus projects.
+site_url: https://mjdaws0n.github.io/Novus-Getting-Started/
+repo_url: https://github.com/MJDaws0n/Novus-Getting-Started
+repo_name: MJDaws0n/Novus-Getting-Started
+docs_dir: docs-src
+site_dir: docs
+strict: true
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font: false
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    scheme: slate
+    primary: black
+    accent: lime
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+nav:
+  - Home: index.md
+  - Compatibility Snapshot: versions.md
+  - Getting Started:
+      - Install Novus and Nox: guide/install.md
+      - Your First Project: guide/first-project.md
+      - Language Tour: guide/language-tour.md
+      - Inline Assembly: guide/inline-assembly.md
+      - Working with std: guide/working-with-std.md
+      - Nox and Libraries: guide/nox-and-libraries.md
+  - Project Walkthroughs:
+      - Building the Platformer: walkthroughs/platformer.md
+      - Building the Todo App: walkthroughs/todo-app.md
+  - Reference:
+      - Authoring Libraries: reference/library-authoring.md
+      - Troubleshooting: reference/troubleshooting.md
+  - AI Documentation:
+      - AI Reference: ai/ai-reference.md
+

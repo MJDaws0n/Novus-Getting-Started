@@ -1,0 +1,31 @@
+# Novus Getting Started
+
+## Primary AI-oriented document
+
+- [AI Documentation: Novus and Nox](./AI_GUIDE.md)
+
+## Human-readable docs that are also useful to agents
+
+- [Install Novus and Nox](./docs/guide/install/index.html)
+- [Your First Project](./docs/guide/first-project/index.html)
+- [Language Tour](./docs/guide/language-tour/index.html)
+- [Inline Assembly](./docs/guide/inline-assembly/index.html)
+- [Working with std](./docs/guide/working-with-std/index.html)
+- [Nox and Libraries](./docs/guide/nox-and-libraries/index.html)
+- [Building the Platformer](./docs/walkthroughs/platformer/index.html)
+- [Building the Todo App](./docs/walkthroughs/todo-app/index.html)
+- [Authoring Libraries](./docs/reference/library-authoring/index.html)
+- [Troubleshooting](./docs/reference/troubleshooting/index.html)
+
+## Scope
+
+This repository explains:
+
+- how to install and verify Novus + Nox
+- how a Nox-managed Novus project is structured
+- how to write normal Novus code
+- how to use `std`
+- how to use inline assembly builtins such as `mov`, `getreg`, `syscall`, and `win_call`
+- how to structure libraries for the Novus ecosystem
+- how the platformer and Todo-App are organised
+
