@@ -9,23 +9,21 @@ strict: true
 
 theme:
   name: material
-  custom_dir: overrides
   language: en
   font: false
   features:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - navigation.footer
     - navigation.indexes
     - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
   palette:
-    scheme: slate
-    primary: black
-    accent: lime
+    scheme: default
+    primary: white
+    accent: blue
 
 plugins:
   - search
@@ -51,9 +49,6 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - javascripts/extra.js
-
 nav:
   - Home: index.md
   - Compatibility Snapshot: versions.md
@@ -72,4 +67,3 @@ nav:
       - Troubleshooting: reference/troubleshooting.md
   - AI Documentation:
       - AI Reference: ai/ai-reference.md
-

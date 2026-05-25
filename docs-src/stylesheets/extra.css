@@ -1,205 +1,134 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
-
-:root {
-  --ink: #ecf0e7;
-  --paper: #12181a;
-  --paper-2: #0c0f11;
-  --frame: rgba(210, 255, 148, 0.16);
-  --accent: #d2ff94;
-  --accent-2: #71f7d1;
-  --muted: #9fa7a3;
-  --shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
-}
-
-body {
-  background:
-    radial-gradient(circle at top left, rgba(113, 247, 209, 0.08), transparent 24rem),
-    radial-gradient(circle at top right, rgba(210, 255, 148, 0.06), transparent 28rem),
-    linear-gradient(180deg, #0b0f10 0%, #11181a 52%, #0c1012 100%);
-}
-
+body,
 .md-typeset,
 .md-nav,
 .md-header__title,
 .md-search__form {
-  font-family: "Newsreader", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 code,
 pre,
 .md-typeset code,
 .md-typeset pre {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+body {
+  background: #ffffff;
+  color: #1f2937;
 }
 
 .md-header {
-  background: rgba(10, 13, 15, 0.88);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(210, 255, 148, 0.12);
+  background: #ffffff;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: none;
 }
 
-.md-header__title {
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.md-header__topic,
+.md-header__title,
+.md-search__input,
+.md-search__icon {
+  color: #111827;
 }
 
-.site-announcement {
-  padding: 0.65rem 1rem;
-  text-align: center;
-  background: linear-gradient(90deg, rgba(113, 247, 209, 0.18), rgba(210, 255, 148, 0.16));
-  color: var(--ink);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.md-tabs,
+.md-tabs__link {
+  color: #374151;
+}
+
+.md-main {
+  background: #ffffff;
 }
 
 .md-main__inner {
-  margin-top: 1.2rem;
+  margin-top: 0;
 }
 
 .md-content__inner {
-  background: linear-gradient(180deg, rgba(17, 24, 26, 0.92), rgba(12, 16, 18, 0.95));
-  border: 1px solid var(--frame);
-  border-radius: 1.2rem;
-  box-shadow: var(--shadow);
-  padding: 2rem !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
-.md-sidebar__scrollwrap,
-.md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link {
+.md-sidebar__scrollwrap {
+  background: #fafafa;
+  border-right: 1px solid #e5e7eb;
+}
+
+.md-nav__title {
+  font-weight: 600;
+}
+
+.md-nav__link {
+  color: #374151;
+}
+
+.md-nav__link:hover {
+  color: #111827;
+}
+
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: #111827;
+  font-weight: 600;
   background: transparent;
+  box-shadow: none;
+}
+
+.md-nav--primary .md-nav__item--active > .md-nav__link {
+  border-left: 2px solid #2563eb;
+  padding-left: calc(.6rem - 2px);
 }
 
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
-  font-family: "Fraunces", serif;
-  letter-spacing: -0.02em;
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .md-typeset h1 {
-  font-size: clamp(2.4rem, 4vw, 4.2rem);
-  line-height: 0.96;
   margin-bottom: 1rem;
 }
 
-.md-typeset h2 {
-  margin-top: 2.4rem;
-  color: var(--accent);
-}
-
 .md-typeset a {
-  color: var(--accent-2);
+  color: #2563eb;
 }
 
-.hero-panel {
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 1.2rem;
-  border: 1px solid rgba(210, 255, 148, 0.18);
-  background:
-    linear-gradient(140deg, rgba(210, 255, 148, 0.08), transparent 40%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
-    #111719;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.72rem;
-  color: var(--accent);
-  margin-bottom: 0.9rem;
-}
-
-.hero-lead {
-  max-width: 52rem;
-  font-size: 1.2rem;
-  color: var(--ink);
-}
-
-.hero-actions {
-  display: flex;
-  gap: 0.9rem;
-  margin-top: 1.4rem;
-  flex-wrap: wrap;
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 0.9rem 1.2rem;
-  border-radius: 999px;
-  text-decoration: none !important;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.86rem;
-  border: 1px solid rgba(210, 255, 148, 0.4);
-  background: var(--accent);
-  color: #091012 !important;
-}
-
-.hero-button.ghost {
-  background: transparent;
-  color: var(--ink) !important;
-}
-
-.quick-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  margin: 1.4rem 0 2rem;
-}
-
-.quick-card {
-  display: block;
-  padding: 1rem 1rem 1.1rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(210, 255, 148, 0.14);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
-  text-decoration: none !important;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-}
-
-.quick-card strong {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: var(--ink);
-}
-
-.quick-card span {
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-
-.quick-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(113, 247, 209, 0.34);
-  background: rgba(113, 247, 209, 0.06);
+.md-typeset a:hover {
+  color: #1d4ed8;
 }
 
 .md-typeset table:not([class]) {
-  border: 1px solid rgba(210, 255, 148, 0.16);
-  border-radius: 1rem;
-  overflow: hidden;
+  border: 1px solid #e5e7eb;
 }
 
 .md-typeset table:not([class]) th {
-  background: rgba(210, 255, 148, 0.08);
+  background: #f8fafc;
 }
 
 .md-typeset .admonition,
 .md-typeset details {
-  border-radius: 1rem;
-  border: 1px solid rgba(113, 247, 209, 0.18);
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: .35rem;
+  border: 1px solid #dbe4f0;
+  background: #f8fbff;
+  box-shadow: none;
 }
 
 .md-typeset pre > code {
-  border-radius: 1rem;
+  border-radius: .35rem;
+}
+
+.md-search__form {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 76.2344em) {
-  .md-content__inner {
-    padding: 1.2rem !important;
+  .md-sidebar__scrollwrap {
+    background: transparent;
+    border-right: 0;
   }
 }
-

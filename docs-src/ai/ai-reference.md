@@ -49,9 +49,9 @@ Typical packages in this ecosystem:
 
 ## Project references
 
-- [Install Novus and Nox](../guide/install/)
-- [Language Tour](../guide/language-tour/)
-- [Inline Assembly](../guide/inline-assembly/)
-- [Working with std](../guide/working-with-std/)
-- [Building the Platformer](../walkthroughs/platformer/)
-- [Building the Todo App](../walkthroughs/todo-app/)
+- [Install Novus and Nox](../guide/install.md)
+- [Language Tour](../guide/language-tour.md)
+- [Inline Assembly](../guide/inline-assembly.md)
+- [Working with std](../guide/working-with-std.md)
+- [Building the Platformer](../walkthroughs/platformer.md)
+- [Building the Todo App](../walkthroughs/todo-app.md)

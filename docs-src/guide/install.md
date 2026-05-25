@@ -64,5 +64,4 @@ If you cross-compile, your host still needs the right backend tools. The Novus R
 
 ## What to do next
 
-After installation, go straight to [Your First Project](first-project/). That is the fastest way to confirm the whole toolchain works end to end.
-
+After installation, go straight to [Your First Project](first-project.md). That is the fastest way to confirm the whole toolchain works end to end.

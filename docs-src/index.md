@@ -1,47 +1,15 @@
 # Novus, from zero to real projects
 
-<div class="hero-panel">
-  <p class="eyebrow">Systems language · native binaries · package-managed workflow</p>
-  <h1>Start with a clean hello world. End with a real game and a real app.</h1>
-  <p class="hero-lead">
-    This guide is not a vague overview. It walks through <strong>installing Novus and Nox</strong>,
-    creating a project, using <code>std</code>, writing inline assembly, and understanding how
-    real Novus codebases are structured.
-  </p>
-  <div class="hero-actions">
-    <a class="hero-button" href="guide/install/">Install Novus</a>
-    <a class="hero-button ghost" href="guide/first-project/">Make your first project</a>
-  </div>
-</div>
+This guide walks through **installing Novus and Nox**, creating a project, using `std`, writing inline assembly, and understanding how real Novus projects are structured.
 
 ## What this repo covers
 
-<div class="quick-grid">
-  <a class="quick-card" href="guide/first-project/">
-    <strong>First project</strong>
-    <span>From <code>nox init</code> to your first compiled binary.</span>
-  </a>
-  <a class="quick-card" href="guide/language-tour/">
-    <strong>Language tour</strong>
-    <span>Modules, imports, functions, arrays, strings, overloads, and <code>#if</code>.</span>
-  </a>
-  <a class="quick-card" href="guide/inline-assembly/">
-    <strong>Inline assembly</strong>
-    <span>How Novus uses <code>mov</code>, <code>getreg</code>, <code>syscall</code>, and <code>win_call</code>.</span>
-  </a>
-  <a class="quick-card" href="guide/working-with-std/">
-    <strong>Working with std</strong>
-    <span>The standard library entrypoint, common helpers, and practical code patterns.</span>
-  </a>
-  <a class="quick-card" href="walkthroughs/platformer/">
-    <strong>Platformer walkthrough</strong>
-    <span>Follow the rendering loop, input handling, camera, and window API.</span>
-  </a>
-  <a class="quick-card" href="walkthroughs/todo-app/">
-    <strong>Todo app walkthrough</strong>
-    <span>See a simple CLI app parse arguments and persist data to disk.</span>
-  </a>
-</div>
+- [First project](guide/first-project.md) — from `nox init` to your first compiled binary
+- [Language tour](guide/language-tour.md) — modules, imports, functions, arrays, strings, overloads, and `#if`
+- [Inline assembly](guide/inline-assembly.md) — `mov`, `getreg`, `syscall`, and `win_call`
+- [Working with std](guide/working-with-std.md) — standard library usage and common patterns
+- [Platformer walkthrough](walkthroughs/platformer.md) — rendering loop, input handling, camera, and window API
+- [Todo app walkthrough](walkthroughs/todo-app.md) — a simple CLI app with file-backed storage
 
 !!! note "Compatibility snapshot"
     These docs were written against the currently installed toolchain on this machine:
@@ -54,19 +22,20 @@
 
 ## Recommended reading order
 
-1. [Install Novus and Nox](guide/install/)
-2. [Your First Project](guide/first-project/)
-3. [Language Tour](guide/language-tour/)
-4. [Working with std](guide/working-with-std/)
-5. [Nox and Libraries](guide/nox-and-libraries/)
-6. [Inline Assembly](guide/inline-assembly/)
+1. [Install Novus and Nox](guide/install.md)
+1. [Install Novus and Nox](guide/install.md)
+2. [Your First Project](guide/first-project.md)
+3. [Language Tour](guide/language-tour.md)
+4. [Working with std](guide/working-with-std.md)
+5. [Nox and Libraries](guide/nox-and-libraries.md)
+6. [Inline Assembly](guide/inline-assembly.md)
 7. Project walkthroughs
 
 ## When to use the AI docs
 
 If you are building tooling, generating Novus code automatically, or teaching an AI agent how to reason about a Novus repo, start with:
 
-- [AI reference](ai/ai-reference/)
+- [AI reference](ai/ai-reference.md)
 - root-level [AI_GUIDE.md](https://github.com/MJDaws0n/Novus-Getting-Started/blob/main/AI_GUIDE.md)
 - root-level [llms.txt](https://github.com/MJDaws0n/Novus-Getting-Started/blob/main/llms.txt)
 
