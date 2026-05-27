@@ -10,6 +10,8 @@ This guide walks through **installing Novus and Nox**, creating a project, using
 - [Working with std](guide/working-with-std.md) — standard library usage and common patterns
 - [Platformer walkthrough](walkthroughs/platformer.md) — rendering loop, input handling, camera, and window API
 - [Todo app walkthrough](walkthroughs/todo-app.md) — a simple CLI app with file-backed storage
+- [Syntax reference](reference/syntax-reference.md) — a fuller reference for statements, types, control flow, imports, `#if`, and builtins
+- [Library reference](reference/library-reference.md) — grouped wrapper-style function lists for the Novus libraries
 
 !!! note "Compatibility snapshot"
     These docs were written against the currently installed toolchain on this machine:
@@ -38,6 +40,8 @@ If you are building tooling, generating Novus code automatically, or teaching an
 - [AI reference](ai/ai-reference.md)
 - root-level [AI_GUIDE.md](https://github.com/MJDaws0n/Novus-Getting-Started/blob/main/AI_GUIDE.md)
 - root-level [llms.txt](https://github.com/MJDaws0n/Novus-Getting-Started/blob/main/llms.txt)
+- [Syntax reference](reference/syntax-reference.md)
+- [Library reference](reference/library-reference.md)
 
 ## Related repositories
 

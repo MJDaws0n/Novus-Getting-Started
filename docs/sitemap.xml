@@ -2,54 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/versions/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/ai/ai-reference/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/guide/first-project/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/guide/inline-assembly/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/guide/install/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/guide/language-tour/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/guide/nox-and-libraries/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/guide/working-with-std/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/library-authoring/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/library-reference/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/syntax-reference/</loc>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/troubleshooting/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/env/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/file-io/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/http/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/maths/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/mysql-interact/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/net/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/physics/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/process/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/smtp/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/std/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/time/</loc>
+         <lastmod>2026-05-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/window/</loc>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/walkthroughs/platformer/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
     <url>
          <loc>https://mjdaws0n.github.io/Novus-Getting-Started/walkthroughs/todo-app/</loc>
-         <lastmod>2026-05-25</lastmod>
+         <lastmod>2026-05-27</lastmod>
     </url>
 </urlset>

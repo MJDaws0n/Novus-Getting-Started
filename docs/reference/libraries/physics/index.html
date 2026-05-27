@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://mjdaws0n.github.io/Novus-Getting-Started/guide/working-with-std/">
+        <link rel="canonical" href="https://mjdaws0n.github.io/Novus-Getting-Started/reference/libraries/physics/">
       
       
-        <link rel="prev" href="../inline-assembly/">
+        <link rel="prev" href="../maths/">
       
       
-        <link rel="next" href="../nox-and-libraries/">
+        <link rel="next" href="../net/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Working with std - Novus Getting Started</title>
+        <title>physics - Novus Getting Started</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +47,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-std" class="md-skip">
+        <a href="#physics" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Novus Getting Started" class="md-header__button md-logo" aria-label="Novus Getting Started" data-md-component="logo">
+    <a href="../../.." title="Novus Getting Started" class="md-header__button md-logo" aria-label="Novus Getting Started" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with std
+              physics
             
           </span>
         </div>
@@ -200,7 +200,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Novus Getting Started" class="md-nav__button md-logo" aria-label="Novus Getting Started" data-md-component="logo">
+    <a href="../../.." title="Novus Getting Started" class="md-nav__button md-logo" aria-label="Novus Getting Started" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -230,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../versions/" class="md-nav__link">
+      <a href="../../../versions/" class="md-nav__link">
         
   
   
@@ -281,10 +281,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -309,11 +307,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -334,7 +334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../../../guide/install/" class="md-nav__link">
         
   
   
@@ -380,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-project/" class="md-nav__link">
+      <a href="../../../guide/first-project/" class="md-nav__link">
         
   
   
@@ -408,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../language-tour/" class="md-nav__link">
+      <a href="../../../guide/language-tour/" class="md-nav__link">
         
   
   
@@ -436,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inline-assembly/" class="md-nav__link">
+      <a href="../../../guide/inline-assembly/" class="md-nav__link">
         
   
   
@@ -461,37 +461,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Working with std
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../guide/working-with-std/" class="md-nav__link">
         
   
   
@@ -507,131 +480,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#import-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Import style
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Useful patterns
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Useful patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#printing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Printing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Converting values
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#length-helpers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Length helpers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strings-and-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Strings and arrays
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-std-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why std matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#real-world-note" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Real-world note
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -644,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nox-and-libraries/" class="md-nav__link">
+      <a href="../../../guide/nox-and-libraries/" class="md-nav__link">
         
   
   
@@ -739,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../walkthroughs/platformer/" class="md-nav__link">
+      <a href="../../../walkthroughs/platformer/" class="md-nav__link">
         
   
   
@@ -767,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../walkthroughs/todo-app/" class="md-nav__link">
+      <a href="../../../walkthroughs/todo-app/" class="md-nav__link">
         
   
   
@@ -799,8 +647,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -821,13 +671,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -848,7 +696,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -866,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/syntax-reference/" class="md-nav__link">
+      <a href="../../syntax-reference/" class="md-nav__link">
         
   
   
@@ -891,8 +739,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -928,13 +778,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -955,7 +803,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -973,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/library-reference/" class="md-nav__link">
+      <a href="../../library-reference/" class="md-nav__link">
         
   
   
@@ -1001,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/std/" class="md-nav__link">
+      <a href="../std/" class="md-nav__link">
         
   
   
@@ -1029,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/env/" class="md-nav__link">
+      <a href="../env/" class="md-nav__link">
         
   
   
@@ -1057,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/file-io/" class="md-nav__link">
+      <a href="../file-io/" class="md-nav__link">
         
   
   
@@ -1085,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/maths/" class="md-nav__link">
+      <a href="../maths/" class="md-nav__link">
         
   
   
@@ -1110,10 +958,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../reference/libraries/physics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    physics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1129,6 +1004,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1141,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/net/" class="md-nav__link">
+      <a href="../net/" class="md-nav__link">
         
   
   
@@ -1169,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/process/" class="md-nav__link">
+      <a href="../process/" class="md-nav__link">
         
   
   
@@ -1197,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/time/" class="md-nav__link">
+      <a href="../time/" class="md-nav__link">
         
   
   
@@ -1225,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/window/" class="md-nav__link">
+      <a href="../window/" class="md-nav__link">
         
   
   
@@ -1253,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/http/" class="md-nav__link">
+      <a href="../http/" class="md-nav__link">
         
   
   
@@ -1281,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/smtp/" class="md-nav__link">
+      <a href="../smtp/" class="md-nav__link">
         
   
   
@@ -1309,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/libraries/mysql-interact/" class="md-nav__link">
+      <a href="../mysql-interact/" class="md-nav__link">
         
   
   
@@ -1345,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/library-authoring/" class="md-nav__link">
+      <a href="../../library-authoring/" class="md-nav__link">
         
   
   
@@ -1373,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/troubleshooting/" class="md-nav__link">
+      <a href="../../troubleshooting/" class="md-nav__link">
         
   
   
@@ -1466,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/ai-reference/" class="md-nav__link">
+      <a href="../../../ai/ai-reference/" class="md-nav__link">
         
   
   
@@ -1521,104 +1427,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#import-style" class="md-nav__link">
+  <a href="#collision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Import style
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Useful patterns
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Useful patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#printing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Printing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Converting values
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#length-helpers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Length helpers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strings-and-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Strings and arrays
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-std-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why std matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#real-world-note" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Real-world note
+        Collision
       
     </span>
   </a>
@@ -1645,64 +1457,16 @@
   
 
 
-<h1 id="working-with-std">Working with std<a class="headerlink" href="#working-with-std" title="Permanent link">&para;</a></h1>
-<p>The standard library is the package almost every Novus project touches first.</p>
-<h2 id="import-style">Import style<a class="headerlink" href="#import-style" title="Permanent link">&para;</a></h2>
-<p>The cleanest modern pattern is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import lib/std std;
+<h1 id="physics">physics<a class="headerlink" href="#physics" title="Permanent link">&para;</a></h1>
+<p><strong>Purpose:</strong> lightweight game/simulation collision helpers.</p>
+<p><strong>Typical import:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import lib/physics/main physics;
 </code></pre></div>
-<p>In some projects you may also see:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import lib/std/main;
-</code></pre></div>
-<p>Both styles exist in the current ecosystem. When in doubt, check the package entrypoint in <code>lib/std/main.nov</code>.</p>
-<h2 id="useful-patterns">Useful patterns<a class="headerlink" href="#useful-patterns" title="Permanent link">&para;</a></h2>
-<h3 id="printing">Printing<a class="headerlink" href="#printing" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>std.print(&quot;hello&quot;);
-</code></pre></div>
-<h3 id="converting-values">Converting values<a class="headerlink" href="#converting-values" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>let count: i32 = 5;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>std.print(std.to_str(count));
-</code></pre></div>
-<h3 id="length-helpers">Length helpers<a class="headerlink" href="#length-helpers" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>let text: str = &quot;abc&quot;;
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>let xs: []i32 = [1, 2, 3];
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>std.print(std.to_str(std.len(text)));
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>std.print(std.to_str(std.len(xs)));
-</code></pre></div>
-<h3 id="strings-and-arrays">Strings and arrays<a class="headerlink" href="#strings-and-arrays" title="Permanent link">&para;</a></h3>
-<p>Novus applications often combine builtins and std-style helpers:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>let xs: []str = [];
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>array_append(xs, &quot;first&quot;);
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>array_append(xs, &quot;second&quot;);
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>std.print(std.to_str(std.len(xs)));
-</code></pre></div>
-<h2 id="why-std-matters">Why std matters<a class="headerlink" href="#why-std-matters" title="Permanent link">&para;</a></h2>
-<p><code>std</code> is where application code should start before reaching for inline assembly or platform-specific packages.</p>
-<p>It lets you:</p>
+<h2 id="collision">Collision<a class="headerlink" href="#collision" title="Permanent link">&para;</a></h2>
 <ul>
-<li>print and exit cleanly</li>
-<li>convert numbers to strings</li>
-<li>work with arrays and strings idiomatically</li>
-<li>avoid re-implementing basic helpers in every project</li>
+<li><code>aabb_check</code></li>
 </ul>
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>module hello_std;
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>import lib/std std;
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>fn main() -&gt; i32 {
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    let title: str = &quot;Novus&quot;;
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    let nums: []i32 = [4, 8, 15, 16];
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    std.print(&quot;Title: &quot; + title);
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    std.print(&quot;Items: &quot; + std.to_str(std.len(nums)));
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    std.exit(0);
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    return 0;
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>}
-</code></pre></div>
-<h2 id="real-world-note">Real-world note<a class="headerlink" href="#real-world-note" title="Permanent link">&para;</a></h2>
-<p>Older projects may still call helpers like <code>array_len_str(...)</code> or use broad unaliased imports. Modern docs and modern libraries are moving toward a more consistent surface where common operations are unified.</p>
+<p>This package is intentionally small in the current ecosystem and is mainly used by the platformer example.</p>
 
 
 
@@ -1758,10 +1522,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

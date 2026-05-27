@@ -51,6 +51,8 @@ Typical packages in this ecosystem:
 
 - [Install Novus and Nox](../guide/install.md)
 - [Language Tour](../guide/language-tour.md)
+- [Syntax Reference](../reference/syntax-reference.md)
+- [Library Reference](../reference/library-reference.md)
 - [Inline Assembly](../guide/inline-assembly.md)
 - [Working with std](../guide/working-with-std.md)
 - [Building the Platformer](../walkthroughs/platformer.md)

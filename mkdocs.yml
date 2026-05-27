@@ -63,6 +63,21 @@ nav:
       - Building the Platformer: walkthroughs/platformer.md
       - Building the Todo App: walkthroughs/todo-app.md
   - Reference:
+      - Syntax Reference: reference/syntax-reference.md
+      - Library Reference:
+          - Overview: reference/library-reference.md
+          - std: reference/libraries/std.md
+          - env: reference/libraries/env.md
+          - file_io: reference/libraries/file-io.md
+          - maths: reference/libraries/maths.md
+          - physics: reference/libraries/physics.md
+          - net: reference/libraries/net.md
+          - process: reference/libraries/process.md
+          - time: reference/libraries/time.md
+          - window: reference/libraries/window.md
+          - http: reference/libraries/http.md
+          - smtp: reference/libraries/smtp.md
+          - MySQL-Interact: reference/libraries/mysql-interact.md
       - Authoring Libraries: reference/library-authoring.md
       - Troubleshooting: reference/troubleshooting.md
   - AI Documentation:
