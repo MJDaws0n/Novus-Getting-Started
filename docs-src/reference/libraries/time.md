@@ -1,5 +1,8 @@
 # time
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** timing, elapsed-time measurement, and sleep helpers.
 
 **Typical import:**

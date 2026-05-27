@@ -1,5 +1,8 @@
 # file_io
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** file, directory, path, pipe, and memory-mapping helpers.
 
 **Typical import:**

@@ -1,5 +1,8 @@
 # Library reference
 
+--8<-- "includes/status-warning.md"
+
+
 This section lists the wrapper-style functions exposed by the Novus libraries in the current registry ecosystem.
 
 It is designed to be useful for:

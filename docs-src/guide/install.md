@@ -1,5 +1,8 @@
 # Install Novus and Nox
 
+--8<-- "includes/status-warning.md"
+
+
 Novus is the compiler. Nox is the package manager. Install both.
 
 ## 1. Install Novus

@@ -1,5 +1,8 @@
 # net
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** socket-level networking primitives.
 
 **Typical import:**

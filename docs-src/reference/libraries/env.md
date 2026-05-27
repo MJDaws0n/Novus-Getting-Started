@@ -1,5 +1,8 @@
 # env
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** OS and process environment helpers.
 
 **Typical import:**

@@ -1,5 +1,8 @@
 # physics
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** lightweight game/simulation collision helpers.
 
 **Typical import:**

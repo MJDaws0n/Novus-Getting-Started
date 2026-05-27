@@ -1,5 +1,8 @@
 # Nox and libraries
 
+--8<-- "includes/status-warning.md"
+
+
 Nox is what turns Novus from "a compiler you can run once" into a reusable ecosystem.
 
 ## Initialise a project
@@ -30,7 +33,7 @@ installed=std,file_io
 
 pkg:std:source=registry
 pkg:std:url=https://github.com/MJDaws0n/novus-std
-pkg:std:version=1.3.0
+pkg:std:version=1.3.1
 ```
 
 Older projects may include:

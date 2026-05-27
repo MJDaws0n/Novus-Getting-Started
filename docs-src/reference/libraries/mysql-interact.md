@@ -1,5 +1,8 @@
 # MySQL-Interact
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** MySQL client and query helper library.
 
 **Typical import:**

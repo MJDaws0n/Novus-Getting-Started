@@ -1,5 +1,8 @@
 # Building the platformer
 
+--8<-- "includes/status-warning.md"
+
+
 The [platformer-game](https://github.com/MJDaws0n/platformer-game) is one of the best current examples of a real Novus app that is still small enough to understand in one sitting.
 
 ## What it imports

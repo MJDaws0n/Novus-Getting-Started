@@ -1,5 +1,8 @@
 # Working with std
 
+--8<-- "includes/status-warning.md"
+
+
 The standard library is the package almost every Novus project touches first.
 
 ## Import style

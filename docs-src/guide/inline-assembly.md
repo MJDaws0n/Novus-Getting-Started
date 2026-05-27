@@ -1,5 +1,8 @@
 # Inline assembly
 
+--8<-- "includes/status-warning.md"
+
+
 One of the distinctive parts of Novus is that low-level work happens inside the language rather than through a separate FFI layer for every platform.
 
 This is mainly useful for:

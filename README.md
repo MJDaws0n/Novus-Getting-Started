@@ -2,6 +2,8 @@
 
 A detailed onboarding repo for **Novus** and **Nox**.
 
+> **Status note:** Novus is still incomplete. The compiler, tooling, and ecosystem libraries still have bugs and missing pieces, so these docs should be read as the current working guide rather than a guarantee of full stability.
+
 This repository has two jobs:
 
 1. **Human docs** — a polished static site that walks through installation, first projects, inline assembly, `std`, and real project walkthroughs.
@@ -40,4 +42,3 @@ That means the repo always contains a folder of real static HTML that can be ope
 - Building the Todo app
 - Library authoring patterns
 - AI-oriented language reference
-

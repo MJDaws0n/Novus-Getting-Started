@@ -1,5 +1,8 @@
 # Language tour
 
+--8<-- "includes/status-warning.md"
+
+
 This page is a practical tour of the syntax you actually see in Novus projects.
 
 If you want the fuller version rather than the quick tour, use the [Syntax Reference](../reference/syntax-reference.md).

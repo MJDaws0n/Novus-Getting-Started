@@ -1,5 +1,8 @@
 # process
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** subprocess launching, output capture, waiting, and a few desktop picker helpers.
 
 **Typical import:**

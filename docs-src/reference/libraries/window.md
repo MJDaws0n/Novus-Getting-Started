@@ -1,5 +1,8 @@
 # window
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** native window creation, drawing, input polling, and platform/window-system glue.
 
 **Typical import:**

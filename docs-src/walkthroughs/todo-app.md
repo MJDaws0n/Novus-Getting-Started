@@ -1,5 +1,8 @@
 # Building the Todo app
 
+--8<-- "includes/status-warning.md"
+
+
 The [Todo-App](https://github.com/MJDaws0n/Todo-App) is a good CLI example because it stays simple:
 
 - parse arguments

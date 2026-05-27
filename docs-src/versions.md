@@ -1,12 +1,16 @@
 # Compatibility snapshot
 
+--8<-- "includes/status-warning.md"
+
+
 This site is meant to be practical, so here is the ecosystem snapshot it was written against.
 
 | Component | Reference |
 | --- | --- |
 | Novus compiler | `Novus Compiler V0.2.0` |
 | Novus repo | `753ee3c` |
-| Nox repo | `632c8be` |
+| Nox repo | `10349a4` |
+| std release | `1.3.1` |
 | window library | `1.1.1` |
 | Example app: Todo-App | current GitHub repo state on 2026-05-25 |
 | Example app: platformer-game | current GitHub repo state on 2026-05-25 |

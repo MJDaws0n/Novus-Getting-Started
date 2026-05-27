@@ -1,5 +1,8 @@
 # http
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** small HTTP server and response helper library.
 
 **Typical import:**

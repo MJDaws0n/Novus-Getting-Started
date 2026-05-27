@@ -1,5 +1,8 @@
 # Troubleshooting
 
+--8<-- "includes/status-warning.md"
+
+
 ## `novus` or `nox` command not found
 
 Make sure the binaries are on your `PATH`, for example:

@@ -1,5 +1,8 @@
 # AI reference
 
+--8<-- "includes/status-warning.md"
+
+
 This page is the HTML counterpart to the root-level [AI_GUIDE.md](https://github.com/MJDaws0n/Novus-Getting-Started/blob/main/AI_GUIDE.md).
 
 Use the root file when you want a single document for agent ingestion. Use this page when you want the same material inside the docs site.

@@ -2,6 +2,8 @@
 
 This file is written **for AI agents**.
 
+> **Status note:** Novus is still incomplete. Expect rough edges, inconsistent historical layouts, missing features, and library behavior that may differ between versions or targets.
+
 Use it when you need a compact but accurate operational model of the Novus ecosystem: language syntax, imports, packaging, inline assembly, conditional compilation, and the most common project patterns.
 
 ## What Novus is
@@ -65,7 +67,7 @@ installed=std,file_io
 
 pkg:std:source=registry
 pkg:std:url=https://github.com/MJDaws0n/novus-std
-pkg:std:version=1.3.0
+pkg:std:version=1.3.1
 ```
 
 Legacy projects may still include `branch=` and `commit=` lines. If a local `lib/` directory is stale, a project can compile against old package code even when the upstream registry has moved on.
@@ -275,4 +277,3 @@ novus --target=linux/amd64 main.nov
 - Todo-App: <https://github.com/MJDaws0n/Todo-App>
 - Platformer: <https://github.com/MJDaws0n/platformer-game>
 - Human docs site: <https://mjdaws0n.github.io/Novus-Getting-Started/>
-

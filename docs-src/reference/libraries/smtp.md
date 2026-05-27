@@ -1,5 +1,8 @@
 # smtp
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** lightweight SMTP email sending helpers.
 
 **Typical import:**

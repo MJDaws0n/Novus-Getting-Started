@@ -1,5 +1,8 @@
 # maths
 
+--8<-- "includes/status-warning.md"
+
+
 **Purpose:** small arithmetic and number helper library.
 
 **Typical import:**

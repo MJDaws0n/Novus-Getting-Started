@@ -1,5 +1,8 @@
 # Authoring libraries
 
+--8<-- "includes/status-warning.md"
+
+
 If you want to build a package for Nox, design it so downstream projects can import it cleanly and update it safely.
 
 ## Recommended structure

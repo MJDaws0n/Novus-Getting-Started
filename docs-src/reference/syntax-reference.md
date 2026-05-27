@@ -1,5 +1,8 @@
 # Syntax reference
 
+--8<-- "includes/status-warning.md"
+
+
 This page is the fuller language reference for the syntax you use in real Novus projects.
 
 It is intentionally practical rather than academic: it focuses on the syntax and patterns that appear in the compiler docs, the standard ecosystem libraries, and the example applications linked from this guide.

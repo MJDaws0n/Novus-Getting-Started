@@ -1,5 +1,8 @@
 # Novus, from zero to real projects
 
+--8<-- "includes/status-warning.md"
+
+
 This guide walks through **installing Novus and Nox**, creating a project, using `std`, writing inline assembly, and understanding how real Novus projects are structured.
 
 ## What this repo covers
@@ -18,9 +21,9 @@ This guide walks through **installing Novus and Nox**, creating a project, using
 
     - **Novus compiler:** `V0.2.0`
     - **Novus repo:** `753ee3c`
-    - **Nox repo:** `632c8be`
+    - **Nox repo:** `10349a4`
     - **window library:** `1.1.1`
-    - **std examples:** based on current ecosystem usage in the linked repos
+    - **std release:** `1.3.1`
 
 ## Recommended reading order
 

@@ -1,5 +1,8 @@
 # Your first project
 
+--8<-- "includes/status-warning.md"
+
+
 This is the quickest clean path into Novus.
 
 ## Create a project with Nox
@@ -103,7 +106,7 @@ installed=std
 
 pkg:std:source=registry
 pkg:std:url=https://github.com/MJDaws0n/novus-std
-pkg:std:version=1.3.0
+pkg:std:version=1.3.1
 ```
 
 This file is important because it tells Nox:
