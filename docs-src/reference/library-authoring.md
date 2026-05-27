@@ -67,9 +67,8 @@ At a high level:
 1. finish the code and tests
 2. bump `VERSION`
 3. push the repo
-4. update the Nox registry entry
+4. create a PR against the Nox registry repo to update the package entry
 
 ## Keep the public API small
 
 The best Novus libraries expose a tight public surface and hide platform-specific chaos behind it. `window`, `env`, `process`, and `file_io` are all better to use when the platform split lives inside the package rather than inside every application.
-

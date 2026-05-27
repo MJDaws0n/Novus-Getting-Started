@@ -6,7 +6,7 @@ Use the root file when you want a single document for agent ingestion. Use this 
 
 ## Fast rules for AI agents
 
-1. Start from `main.nov` and `libraries.conf`.
+1. Start from `main.nov` and `libraries.conf`. In larger apps, follow the imports from `main.nov` into `src/`.
 2. Check whether imports are aliased or unaliased.
 3. Prefer the package loader (`lib/<pkg>/main.nov`) unless the project intentionally imports a specific file.
 4. Inspect `#if` blocks before assuming a symbol exists on every platform.

@@ -2655,6 +2655,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    return 0;
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>}
 </code></pre></div>
+<p>In larger applications, that root <code>main.nov</code> is usually just the entrypoint and import hub. Most of the real code can live under <code>src/</code> and its subfolders.</p>
 <p>CLI apps may also expose an argument-taking entrypoint:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn main(argc: i32, argv: u64) -&gt; i32 {
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    return 0;
@@ -3026,13 +3027,14 @@
 <li><code>main.nov</code></li>
 <li><code>libraries.conf</code></li>
 <li><code>lib/&lt;package&gt;/...</code></li>
+<li><code>src/...</code></li>
 </ul>
 <h2 id="practical-style-notes">Practical style notes<a class="headerlink" href="#practical-style-notes" title="Permanent link">&para;</a></h2>
 <p>Current Novus projects in this ecosystem generally follow these conventions:</p>
 <ol>
 <li>use explicit integer sizes (<code>i32</code>, <code>i64</code>)</li>
 <li>prefer alias imports for larger libraries</li>
-<li>use <code>main.nov</code> as the package entrypoint</li>
+<li>use root <code>main.nov</code> as the entrypoint and keep larger app code in <code>src/</code></li>
 <li>keep cross-platform branching in libraries via <code>#if</code>, not in app code when possible</li>
 <li>use explicit loops and explicit state rather than heavy abstraction</li>
 </ol>

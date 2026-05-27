@@ -1507,26 +1507,23 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import lib/env env;
 </code></pre></div>
 <h2 id="identity-and-environment">Identity and environment<a class="headerlink" href="#identity-and-environment" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>get_username</code></li>
-<li><code>get_home_dir</code></li>
-<li><code>getenv</code></li>
-<li><code>gethostname</code></li>
-<li><code>getcwd</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fn get_username() -&gt; str;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn get_home_dir() -&gt; str;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>fn getenv(name: str) -&gt; str;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>fn gethostname() -&gt; str;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>fn getcwd() -&gt; str;
+</code></pre></div>
 <h2 id="process-and-user-ids">Process and user IDs<a class="headerlink" href="#process-and-user-ids" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>getpid</code></li>
-<li><code>getppid</code></li>
-<li><code>getuid</code></li>
-<li><code>geteuid</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn getpid() -&gt; i32;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fn getppid() -&gt; i32;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>fn getuid() -&gt; i32;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>fn geteuid() -&gt; i32;
+</code></pre></div>
 <h2 id="platform-information">Platform information<a class="headerlink" href="#platform-information" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>get_arch</code></li>
-<li><code>get_os_name</code></li>
-<li><code>get_os_version</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn get_arch() -&gt; str;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fn get_os_name() -&gt; str;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>fn get_os_version() -&gt; str;
+</code></pre></div>
 
 
 

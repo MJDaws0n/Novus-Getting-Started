@@ -1548,7 +1548,7 @@
 <p>Use the root file when you want a single document for agent ingestion. Use this page when you want the same material inside the docs site.</p>
 <h2 id="fast-rules-for-ai-agents">Fast rules for AI agents<a class="headerlink" href="#fast-rules-for-ai-agents" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Start from <code>main.nov</code> and <code>libraries.conf</code>.</li>
+<li>Start from <code>main.nov</code> and <code>libraries.conf</code>. In larger apps, follow the imports from <code>main.nov</code> into <code>src/</code>.</li>
 <li>Check whether imports are aliased or unaliased.</li>
 <li>Prefer the package loader (<code>lib/&lt;pkg&gt;/main.nov</code>) unless the project intentionally imports a specific file.</li>
 <li>Inspect <code>#if</code> blocks before assuming a symbol exists on every platform.</li>

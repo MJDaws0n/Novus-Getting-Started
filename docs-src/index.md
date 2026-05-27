@@ -11,7 +11,7 @@ This guide walks through **installing Novus and Nox**, creating a project, using
 - [Platformer walkthrough](walkthroughs/platformer.md) — rendering loop, input handling, camera, and window API
 - [Todo app walkthrough](walkthroughs/todo-app.md) — a simple CLI app with file-backed storage
 - [Syntax reference](reference/syntax-reference.md) — a fuller reference for statements, types, control flow, imports, `#if`, and builtins
-- [Library reference](reference/library-reference.md) — grouped wrapper-style function lists for the Novus libraries
+- [Library reference](reference/library-reference.md) — grouped library signatures with parameters and return types
 
 !!! note "Compatibility snapshot"
     These docs were written against the currently installed toolchain on this machine:

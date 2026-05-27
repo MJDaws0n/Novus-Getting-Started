@@ -1617,62 +1617,54 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import lib/file_io fio;
 </code></pre></div>
 <h2 id="high-level-convenience">High-level convenience<a class="headerlink" href="#high-level-convenience" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>read_file</code></li>
-<li><code>write_file</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fn read_file(path: str) -&gt; str;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn write_file(path: str, content: str) -&gt; i32;
+</code></pre></div>
 <h2 id="file-open-close-seek">File open / close / seek<a class="headerlink" href="#file-open-close-seek" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>file_open</code></li>
-<li><code>file_open_read</code></li>
-<li><code>file_open_write</code></li>
-<li><code>file_close</code></li>
-<li><code>file_seek</code></li>
-<li><code>file_size</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn file_open(path: str, flags: i32, mode: i32) -&gt; i32;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fn file_open_read(path: str) -&gt; i32;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>fn file_open_write(path: str) -&gt; i32;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>fn file_close(fd: i32) -&gt; void;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>fn file_seek(fd: i32, offset: u64, whence: i32) -&gt; i64;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>fn file_size(fd: i32) -&gt; u64;
+</code></pre></div>
 <h2 id="file-reads-and-writes">File reads and writes<a class="headerlink" href="#file-reads-and-writes" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>file_read</code></li>
-<li><code>file_write</code></li>
-<li><code>file_write_str</code></li>
-<li><code>file_append</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn file_read(fd: i32, buf_addr: u64, count: i32) -&gt; i32;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fn file_write(fd: i32, buf_addr: u64, count: i32) -&gt; i32;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>fn file_write_str(fd: i32, s: str) -&gt; i32;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>fn file_append(path: str, content: str) -&gt; i32;
+</code></pre></div>
 <h2 id="existence-and-filesystem-operations">Existence and filesystem operations<a class="headerlink" href="#existence-and-filesystem-operations" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>file_exists</code></li>
-<li><code>dir_exists</code></li>
-<li><code>file_delete</code></li>
-<li><code>file_copy</code></li>
-<li><code>file_rename</code></li>
-<li><code>file_chdir</code></li>
-<li><code>mkdirp</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>fn file_exists(path: str) -&gt; bool;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>fn dir_exists(path: str) -&gt; bool;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>fn file_delete(path: str) -&gt; i32;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>fn file_copy(src_path: str, dst_path: str) -&gt; i32;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>fn file_rename(old_path: str, new_path: str) -&gt; i32;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>fn file_chdir(path: str) -&gt; i32;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>fn mkdirp(path: str) -&gt; i32;
+</code></pre></div>
 <h2 id="path-helpers">Path helpers<a class="headerlink" href="#path-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>path_join</code></li>
-<li><code>path_dir</code></li>
-<li><code>path_basename</code></li>
-<li><code>path_stem</code></li>
-<li><code>path_ext</code></li>
-<li><code>path_ext_no_dot</code></li>
-<li><code>path_insert_suffix</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fn path_join(a: str, b: str) -&gt; str;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>fn path_dir(path: str) -&gt; str;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fn path_basename(path: str) -&gt; str;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>fn path_stem(path: str) -&gt; str;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>fn path_ext(path: str) -&gt; str;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>fn path_ext_no_dot(path: str) -&gt; str;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>fn path_insert_suffix(path: str, suffix: str) -&gt; str;
+</code></pre></div>
 <h2 id="pipe-and-descriptor-helpers">Pipe and descriptor helpers<a class="headerlink" href="#pipe-and-descriptor-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>pipe_create</code></li>
-<li><code>dup2</code></li>
-<li><code>at_fdcwd</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fn pipe_create(res: []i32) -&gt; void;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>fn dup2(oldfd: i32, newfd: i32) -&gt; void;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>fn at_fdcwd() -&gt; i32;
+</code></pre></div>
 <h2 id="memory-mapped-file-helpers">Memory-mapped file helpers<a class="headerlink" href="#memory-mapped-file-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>file_mmap_read</code></li>
-<li><code>file_munmap</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>fn file_mmap_read(fd: i32, size: u64) -&gt; u64;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>fn file_munmap(addr: u64, size: u64) -&gt; void;
+</code></pre></div>
 <h2 id="low-level-syscall-wrappers">Low-level syscall wrappers<a class="headerlink" href="#low-level-syscall-wrappers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>sys_chmod</code></li>
-<li><code>sys_mkdir</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>fn sys_chmod(path: str, mode: i32) -&gt; i32;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>fn sys_mkdir(path: str, mode: i32) -&gt; i32;
+</code></pre></div>
 
 
 

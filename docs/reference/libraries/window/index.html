@@ -1617,122 +1617,114 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import lib/window/main window;
 </code></pre></div>
 <h2 id="main-user-facing-api">Main user-facing API<a class="headerlink" href="#main-user-facing-api" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>wm_open</code></li>
-<li><code>wm_open_default</code></li>
-<li><code>wm_show</code></li>
-<li><code>wm_hide</code></li>
-<li><code>wm_title</code></li>
-<li><code>wm_resize</code></li>
-<li><code>wm_size</code></li>
-<li><code>wm_quit</code></li>
-<li><code>wm_ping</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fn wm_open(title: str, exe_path: str, sock_path: str) -&gt; i32;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn wm_open_default(title: str) -&gt; i32;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>fn wm_show(fd: i32) -&gt; i32;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>fn wm_hide(fd: i32) -&gt; i32;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>fn wm_title(fd: i32, title: str) -&gt; i32;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>fn wm_resize(fd: i32, width: i32, height: i32) -&gt; i32;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>fn wm_size(fd: i32) -&gt; str;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>fn wm_quit(fd: i32) -&gt; i32;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>fn wm_ping(fd: i32) -&gt; i32;
+</code></pre></div>
 <h2 id="drawing">Drawing<a class="headerlink" href="#drawing" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>wm_clear</code></li>
-<li><code>wm_rect</code></li>
-<li><code>wm_present</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn wm_clear(fd: i32, color: i32) -&gt; i32;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fn wm_rect(fd: i32, x: i32, y: i32, width: i32, height: i32, color: i32) -&gt; i32;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>fn wm_present(fd: i32) -&gt; i32;
+</code></pre></div>
 <h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>wm_input</code></li>
-<li><code>wm_input_left</code></li>
-<li><code>wm_input_right</code></li>
-<li><code>wm_input_jump</code></li>
-<li><code>wm_input_down</code></li>
-<li><code>wm_input_quit</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn wm_input(fd: i32) -&gt; i32;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fn wm_input_left() -&gt; i32;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>fn wm_input_right() -&gt; i32;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>fn wm_input_jump() -&gt; i32;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>fn wm_input_down() -&gt; i32;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>fn wm_input_quit() -&gt; i32;
+</code></pre></div>
 <h2 id="process-and-helper-startup">Process and helper startup<a class="headerlink" href="#process-and-helper-startup" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>wm_start</code></li>
-<li><code>wm_start_auto</code></li>
-<li><code>wm_spawn</code></li>
-<li><code>wm_exe_default</code></li>
-<li><code>wm_sock_path_default</code></li>
-<li><code>wm_socket</code></li>
-<li><code>wm_connect</code></li>
-<li><code>wm_sockaddr_un_make</code></li>
-<li><code>wm_sleep_ms</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>fn wm_start(sock_path: str) -&gt; i32;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>fn wm_start_auto(exe_path: str, sock_path: str, title: str) -&gt; i32;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>fn wm_spawn(exe_path: str, sock_path: str, title: str, auto_show: bool) -&gt; i32;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>fn wm_exe_default() -&gt; str;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>fn wm_sock_path_default() -&gt; str;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>fn wm_socket() -&gt; i32;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>fn wm_connect(sock_path: str) -&gt; i32;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>fn wm_sockaddr_un_make(path: str) -&gt; str;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>fn wm_sleep_ms(ms: i32) -&gt; void;
+</code></pre></div>
 <h2 id="command-protocol-helpers">Command / protocol helpers<a class="headerlink" href="#command-protocol-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>wm_send_cmd</code></li>
-<li><code>wm_send_line</code></li>
-<li><code>wm_recv_line</code></li>
-<li><code>wm_recv_ok</code></li>
-<li><code>wm_escape_arg</code></li>
-<li><code>wm_unescape_arg</code></li>
-<li><code>wm_write_i32_le</code></li>
-<li><code>wm_to_u8</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fn wm_send_cmd(fd: i32, cmd: str, arg: str) -&gt; i32;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>fn wm_send_line(fd: i32, line: str) -&gt; i32;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fn wm_recv_line(fd: i32, buf_len: i32) -&gt; str;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>fn wm_recv_ok(fd: i32) -&gt; str;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>fn wm_escape_arg(arg: str) -&gt; str;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>fn wm_unescape_arg(arg: str) -&gt; str;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>fn wm_write_i32_le(buf: str, offset: i32, val: i32) -&gt; void;
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>fn wm_to_u8(v: i32) -&gt; i32;
+</code></pre></div>
 <h2 id="browser-older-helper-protocol-wrappers">Browser / older helper protocol wrappers<a class="headerlink" href="#browser-older-helper-protocol-wrappers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>wm_open_serve</code></li>
-<li><code>wm_serve</code></li>
-<li><code>wm_jseval</code></li>
-<li><code>wm_navigate</code></li>
-<li><code>wm_send_to_js</code></li>
-<li><code>wm_recv_js_msg</code></li>
-<li><code>wm_parse_port</code></li>
-<li><code>wm_escape_js</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fn wm_open_serve(title: str, root_dir: str, index_path: str) -&gt; i32;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>fn wm_serve(fd: i32, root_dir: str) -&gt; str;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>fn wm_jseval(fd: i32, code: str) -&gt; i32;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>fn wm_navigate(fd: i32, url: str) -&gt; i32;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>fn wm_send_to_js(fd: i32, msg: str) -&gt; i32;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>fn wm_recv_js_msg(fd: i32) -&gt; str;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>fn wm_parse_port(resp: str) -&gt; i32;
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>fn wm_escape_js(s: str) -&gt; str;
+</code></pre></div>
 <h2 id="linux-x11-and-platform-glue-wrappers">Linux X11 and platform glue wrappers<a class="headerlink" href="#linux-x11-and-platform-glue-wrappers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>init_x11</code></li>
-<li><code>display_socket_path</code></li>
-<li><code>parse_display_num</code></li>
-<li><code>read_xauthority_cookie</code></li>
-<li><code>sock_socket</code></li>
-<li><code>sock_connect</code></li>
-<li><code>sys_close</code></li>
-<li><code>sys_read</code></li>
-<li><code>sys_write</code></li>
-<li><code>syscall_result_i32</code></li>
-<li><code>syscall_result_i64</code></li>
-<li><code>pad4</code></li>
-<li><code>read_u16_be</code></li>
-<li><code>read_u16_le</code></li>
-<li><code>read_u32_le</code></li>
-<li><code>write_u16_be</code></li>
-<li><code>write_u16_le</code></li>
-<li><code>write_u32_le</code></li>
-<li><code>write_all</code></li>
-<li><code>make_zero_buf</code></li>
-<li><code>next_resource_id</code></li>
-<li><code>process_x_message</code></li>
-<li><code>poll_x</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>fn init_x11(title: str) -&gt; i32;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>fn display_socket_path(display: str) -&gt; str;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>fn parse_display_num(display: str) -&gt; i32;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>fn read_xauthority_cookie(path: str, display_num: i32) -&gt; str;
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>fn sock_socket(domain: i32, kind: i32) -&gt; i32;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>fn sock_connect(fd: i32, addr_ptr: u64, addr_len: i32) -&gt; i32;
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>fn sys_close(fd: i32) -&gt; void;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>fn sys_read(fd: i32, addr: u64, count: i32) -&gt; i32;
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>fn sys_write(fd: i32, addr: u64, count: i32) -&gt; i32;
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>fn syscall_result_i32() -&gt; i32;
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>fn syscall_result_i64() -&gt; i64;
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>fn pad4(n: i32) -&gt; i32;
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>fn read_u16_be(buf: str, off: i32) -&gt; i32;
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>fn read_u16_le(buf: str, off: i32) -&gt; i32;
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>fn read_u32_le(buf: str, off: i32) -&gt; i32;
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>fn write_u16_be(buf: str, off: i32, val: i32) -&gt; void;
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>fn write_u16_le(buf: str, off: i32, val: i32) -&gt; void;
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>fn write_u32_le(buf: str, off: i32, val: i32) -&gt; void;
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>fn write_all(fd: i32, data: str, count: i32) -&gt; i32;
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>fn make_zero_buf(size: i32) -&gt; str;
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>fn next_resource_id() -&gt; i32;
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>fn process_x_message(pkt: str) -&gt; void;
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>fn poll_x(timeout_ms: i32) -&gt; i32;
+</code></pre></div>
 <h2 id="x11-drawing-and-resource-wrappers">X11 drawing and resource wrappers<a class="headerlink" href="#x11-drawing-and-resource-wrappers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>x_connect</code></li>
-<li><code>x_setup</code></li>
-<li><code>x_send_setup</code></li>
-<li><code>x_read_setup</code></li>
-<li><code>x_init_request_buffers</code></li>
-<li><code>x_intern_atom</code></li>
-<li><code>x_create_window</code></li>
-<li><code>x_map_window</code></li>
-<li><code>x_unmap_window</code></li>
-<li><code>x_resize_window</code></li>
-<li><code>x_set_title</code></li>
-<li><code>x_set_wm_protocols</code></li>
-<li><code>x_create_gc</code></li>
-<li><code>x_change_gc_color</code></li>
-<li><code>x_create_pixmap</code></li>
-<li><code>x_free_pixmap</code></li>
-<li><code>x_ensure_backbuffer</code></li>
-<li><code>x_copy_backbuffer_to_window</code></li>
-<li><code>x_fill_rect</code></li>
-<li><code>x_drawable</code></li>
-<li><code>x_sync</code></li>
-<li><code>x_file_open_read</code></li>
-<li><code>x_file_seek</code></li>
-<li><code>x_file_size</code></li>
-<li><code>x_read_file</code></li>
-<li><code>x_pump_events</code></li>
-<li><code>x_set8</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>fn x_connect() -&gt; i32;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>fn x_setup(fd: i32) -&gt; i32;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>fn x_send_setup(fd: i32, cookie: str) -&gt; i32;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>fn x_read_setup(fd: i32) -&gt; i32;
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>fn x_init_request_buffers() -&gt; void;
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>fn x_intern_atom(name: str) -&gt; i32;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>fn x_create_window() -&gt; i32;
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>fn x_map_window() -&gt; void;
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>fn x_unmap_window() -&gt; void;
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>fn x_resize_window(width: i32, height: i32) -&gt; void;
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>fn x_set_title(title: str) -&gt; void;
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>fn x_set_wm_protocols() -&gt; void;
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>fn x_create_gc() -&gt; void;
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>fn x_change_gc_color(color: i32) -&gt; void;
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>fn x_create_pixmap(width: i32, height: i32) -&gt; i32;
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>fn x_free_pixmap(pixmap_id: i32) -&gt; void;
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>fn x_ensure_backbuffer() -&gt; void;
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>fn x_copy_backbuffer_to_window() -&gt; void;
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>fn x_fill_rect(x: i32, y: i32, w: i32, h: i32, color: i32) -&gt; void;
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>fn x_drawable() -&gt; i32;
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>fn x_sync() -&gt; void;
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>fn x_file_open_read(path: str) -&gt; i32;
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>fn x_file_seek(fd: i32, offset: u64, whence: i32) -&gt; i64;
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>fn x_file_size(fd: i32) -&gt; i32;
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>fn x_read_file(path: str) -&gt; str;
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>fn x_pump_events() -&gt; void;
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>fn x_set8(buf: str, off: i32, val: i32) -&gt; void;
+</code></pre></div>
 <p>This is one of the widest APIs in the ecosystem because it contains both the public drawing API and a lot of transport/platform support code.</p>
 
 

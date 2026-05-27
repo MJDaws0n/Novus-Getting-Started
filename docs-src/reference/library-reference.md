@@ -17,6 +17,7 @@ That means:
 - user-facing functions are listed
 - low-level helper wrappers are included where they are part of the exported surface
 - repeated overload variants are usually grouped under one family name instead of being expanded line by line
+- each page now shows the parameters and return type for the documented functions
 
 ## Covered libraries
 
@@ -47,4 +48,3 @@ If you are working in an older project, always check:
 1. the package version in `libraries.conf`
 2. the actual source code inside `lib/<package>/`
 3. the matching registry entry in `Nox/registry.txt`
-

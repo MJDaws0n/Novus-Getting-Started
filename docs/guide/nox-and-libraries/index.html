@@ -596,6 +596,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recommended-app-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended app layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#updating-projects-safely" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -607,10 +618,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-a-package-should-contain" class="md-nav__link">
+  <a href="#library-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What a package should contain
+        Library layout
       
     </span>
   </a>
@@ -1526,6 +1537,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recommended-app-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended app layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#updating-projects-safely" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1537,10 +1559,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-a-package-should-contain" class="md-nav__link">
+  <a href="#library-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What a package should contain
+        Library layout
       
     </span>
   </a>
@@ -1599,6 +1621,23 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import lib/file_io fio;
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>import lib/window/main window;
 </code></pre></div>
+<h2 id="recommended-app-layout">Recommended app layout<a class="headerlink" href="#recommended-app-layout" title="Permanent link">&para;</a></h2>
+<p>For larger applications, keep the repository root simple and move most code into <code>src/</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>my-app/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├── main.nov
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├── libraries.conf
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├── lib/
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│   └── std/
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>└── src/
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    ├── app.nov
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    └── features/
+</code></pre></div>
+<p>The usual pattern is:</p>
+<ul>
+<li>root <code>main.nov</code> stays small</li>
+<li><code>main.nov</code> imports files from <code>src/</code></li>
+<li>feature code lives in <code>src/</code> subfolders</li>
+</ul>
 <h2 id="updating-projects-safely">Updating projects safely<a class="headerlink" href="#updating-projects-safely" title="Permanent link">&para;</a></h2>
 <p>If a project starts throwing strange errors after a package ecosystem change, check:</p>
 <ol>
@@ -1607,20 +1646,9 @@
 <li>whether the project has a stale vendored package copy</li>
 </ol>
 <p>That specific problem appears often when older projects keep package directories checked into git.</p>
-<h2 id="what-a-package-should-contain">What a package should contain<a class="headerlink" href="#what-a-package-should-contain" title="Permanent link">&para;</a></h2>
-<p>At minimum:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>my-lib/
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├── main.nov
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├── VERSION
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├── libraries.conf
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>└── docs.md
-</code></pre></div>
-<p>If the library is platform-specific, a structured layout is cleaner:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>platforms/
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── darwin/
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>├── linux/
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>└── windows/
-</code></pre></div>
+<h2 id="library-layout">Library layout<a class="headerlink" href="#library-layout" title="Permanent link">&para;</a></h2>
+<p>Application layout and library layout are slightly different.</p>
+<p>For libraries, keep using the dedicated guidance in <a href="../../reference/library-authoring/">Authoring libraries</a>. That page covers the public <code>main.nov</code> loader, <code>VERSION</code>, <code>docs.md</code>, tests, and platform folders.</p>
 
 
 

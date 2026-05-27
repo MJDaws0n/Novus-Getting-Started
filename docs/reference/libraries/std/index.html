@@ -985,6 +985,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#backward-compat-typed-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backward-compat typed names
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1569,6 +1580,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#backward-compat-typed-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backward-compat typed names
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1598,62 +1620,84 @@
 <ul>
 <li>This page lists wrapper-style function families once.</li>
 <li>It does <strong>not</strong> expand every overload variant.</li>
+<li>The signatures below show the common forms you will usually call in app code.</li>
 </ul>
 <h2 id="output-and-process-control">Output and process control<a class="headerlink" href="#output-and-process-control" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>print</code></li>
-<li><code>print_raw</code></li>
-<li><code>exit</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fn print(msg: str) -&gt; void;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn print_raw(msg: str) -&gt; void;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>fn exit(code: i32) -&gt; void;
+</code></pre></div>
 <h2 id="conversion-families">Conversion families<a class="headerlink" href="#conversion-families" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>to_str</code></li>
-<li><code>to_i32</code></li>
-<li><code>to_i64</code></li>
-<li><code>to_u64</code></li>
-<li><code>to_bool</code></li>
-<li><code>to_hex</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn to_str(n: i32) -&gt; str;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fn to_str(n: i64) -&gt; str;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>fn to_str(b: bool) -&gt; str;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>fn to_str(s: str) -&gt; str;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>fn to_i32(s: str) -&gt; i32;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>fn to_i32(n: i64) -&gt; i32;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>fn to_i32(n: u64) -&gt; i32;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>fn to_i32(n: i32) -&gt; i32;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>fn to_i64(s: str) -&gt; i64;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>fn to_i64(n: i32) -&gt; i64;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>fn to_i64(n: u64) -&gt; i64;
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>fn to_i64(n: i64) -&gt; i64;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>fn to_u64(n: i32) -&gt; u64;
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>fn to_u64(n: i64) -&gt; u64;
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>fn to_u64(n: u64) -&gt; u64;
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>fn to_bool(s: str) -&gt; bool;
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>fn to_bool(b: bool) -&gt; bool;
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>fn to_hex(n: i32) -&gt; str;
+</code></pre></div>
 <h2 id="container-helpers">Container helpers<a class="headerlink" href="#container-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>len</code></li>
-<li><code>contains</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn len(s: str) -&gt; i32;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fn len(arr: []i32) -&gt; i32;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>fn len(arr: []i64) -&gt; i32;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>fn len(arr: []u64) -&gt; i32;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>fn len(arr: []str) -&gt; i32;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>fn contains(s: str, needle: str) -&gt; bool;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>fn contains(arr: []i32, v: i32) -&gt; bool;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>fn contains(arr: []i64, v: i64) -&gt; bool;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>fn contains(arr: []str, v: str) -&gt; bool;
+</code></pre></div>
 <h2 id="string-helpers">String helpers<a class="headerlink" href="#string-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>equals</code></li>
-<li><code>find</code></li>
-<li><code>last_find</code></li>
-<li><code>count</code></li>
-<li><code>is_empty</code></li>
-<li><code>is_blank</code></li>
-<li><code>lower</code></li>
-<li><code>upper</code></li>
-<li><code>reverse</code></li>
-<li><code>repeat</code></li>
-<li><code>trim</code></li>
-<li><code>trim_left</code></li>
-<li><code>trim_right</code></li>
-<li><code>pad_left</code></li>
-<li><code>pad_right</code></li>
-<li><code>replace</code></li>
-<li><code>replace_first</code></li>
-<li><code>split_first</code></li>
-<li><code>split_rest</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>fn equals(a: str, b: str) -&gt; bool;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>fn find(s: str, needle: str) -&gt; i32;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>fn last_find(s: str, needle: str) -&gt; i32;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>fn count(s: str, needle: str) -&gt; i32;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>fn is_empty(s: str) -&gt; bool;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>fn is_blank(s: str) -&gt; bool;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>fn lower(s: str) -&gt; str;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>fn upper(s: str) -&gt; str;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>fn reverse(s: str) -&gt; str;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>fn repeat(s: str, n: i32) -&gt; str;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>fn trim(s: str) -&gt; str;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>fn trim_left(s: str) -&gt; str;
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>fn trim_right(s: str) -&gt; str;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>fn pad_left(s: str, total: i32, pad: str) -&gt; str;
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>fn pad_right(s: str, total: i32, pad: str) -&gt; str;
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>fn replace(s: str, old_val: str, new_val: str) -&gt; str;
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>fn replace_first(s: str, old_val: str, new_val: str) -&gt; str;
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>fn split_first(s: str, delim: str) -&gt; str;
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>fn split_rest(s: str, delim: str) -&gt; str;
+</code></pre></div>
 <h2 id="runtime-and-environment-helpers">Runtime and environment helpers<a class="headerlink" href="#runtime-and-environment-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>get_time_ns</code></li>
-<li><code>get_username</code></li>
-<li><code>get_home_dir</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fn get_time_ns() -&gt; i64;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>fn get_username() -&gt; str;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fn get_home_dir() -&gt; str;
+</code></pre></div>
 <h2 id="memory-wrappers">Memory wrappers<a class="headerlink" href="#memory-wrappers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>load8</code></li>
-<li><code>load32</code></li>
-<li><code>load64</code></li>
-<li><code>store_byte</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fn load8(addr: u64) -&gt; i32;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>fn load32(addr: u64) -&gt; i32;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>fn load64(addr: u64) -&gt; i64;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>fn store_byte(addr: u64, value: i32) -&gt; void;
+</code></pre></div>
+<h2 id="backward-compat-typed-names">Backward-compat typed names<a class="headerlink" href="#backward-compat-typed-names" title="Permanent link">&para;</a></h2>
+<p>Older projects may still use the pre-unified names such as <code>i32_to_str</code>, <code>str_to_i32</code>, <code>array_len_i64</code>, <code>str_trim</code>, or <code>str_contains</code>. Newer code should prefer the unified wrapper names above.</p>
 
 
 

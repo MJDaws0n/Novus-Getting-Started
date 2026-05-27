@@ -10,58 +10,73 @@ import lib/file_io fio;
 
 ## High-level convenience
 
-- `read_file`
-- `write_file`
+```novus
+fn read_file(path: str) -> str;
+fn write_file(path: str, content: str) -> i32;
+```
 
 ## File open / close / seek
 
-- `file_open`
-- `file_open_read`
-- `file_open_write`
-- `file_close`
-- `file_seek`
-- `file_size`
+```novus
+fn file_open(path: str, flags: i32, mode: i32) -> i32;
+fn file_open_read(path: str) -> i32;
+fn file_open_write(path: str) -> i32;
+fn file_close(fd: i32) -> void;
+fn file_seek(fd: i32, offset: u64, whence: i32) -> i64;
+fn file_size(fd: i32) -> u64;
+```
 
 ## File reads and writes
 
-- `file_read`
-- `file_write`
-- `file_write_str`
-- `file_append`
+```novus
+fn file_read(fd: i32, buf_addr: u64, count: i32) -> i32;
+fn file_write(fd: i32, buf_addr: u64, count: i32) -> i32;
+fn file_write_str(fd: i32, s: str) -> i32;
+fn file_append(path: str, content: str) -> i32;
+```
 
 ## Existence and filesystem operations
 
-- `file_exists`
-- `dir_exists`
-- `file_delete`
-- `file_copy`
-- `file_rename`
-- `file_chdir`
-- `mkdirp`
+```novus
+fn file_exists(path: str) -> bool;
+fn dir_exists(path: str) -> bool;
+fn file_delete(path: str) -> i32;
+fn file_copy(src_path: str, dst_path: str) -> i32;
+fn file_rename(old_path: str, new_path: str) -> i32;
+fn file_chdir(path: str) -> i32;
+fn mkdirp(path: str) -> i32;
+```
 
 ## Path helpers
 
-- `path_join`
-- `path_dir`
-- `path_basename`
-- `path_stem`
-- `path_ext`
-- `path_ext_no_dot`
-- `path_insert_suffix`
+```novus
+fn path_join(a: str, b: str) -> str;
+fn path_dir(path: str) -> str;
+fn path_basename(path: str) -> str;
+fn path_stem(path: str) -> str;
+fn path_ext(path: str) -> str;
+fn path_ext_no_dot(path: str) -> str;
+fn path_insert_suffix(path: str, suffix: str) -> str;
+```
 
 ## Pipe and descriptor helpers
 
-- `pipe_create`
-- `dup2`
-- `at_fdcwd`
+```novus
+fn pipe_create(res: []i32) -> void;
+fn dup2(oldfd: i32, newfd: i32) -> void;
+fn at_fdcwd() -> i32;
+```
 
 ## Memory-mapped file helpers
 
-- `file_mmap_read`
-- `file_munmap`
+```novus
+fn file_mmap_read(fd: i32, size: u64) -> u64;
+fn file_munmap(addr: u64, size: u64) -> void;
+```
 
 ## Low-level syscall wrappers
 
-- `sys_chmod`
-- `sys_mkdir`
-
+```novus
+fn sys_chmod(path: str, mode: i32) -> i32;
+fn sys_mkdir(path: str, mode: i32) -> i32;
+```

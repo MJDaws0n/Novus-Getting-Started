@@ -20,6 +20,8 @@ fn main() -> i32 {
 }
 ```
 
+In larger applications, that root `main.nov` is usually just the entrypoint and import hub. Most of the real code can live under `src/` and its subfolders.
+
 CLI apps may also expose an argument-taking entrypoint:
 
 ```novus
@@ -521,6 +523,7 @@ That gives you:
 - `main.nov`
 - `libraries.conf`
 - `lib/<package>/...`
+- `src/...`
 
 ## Practical style notes
 
@@ -528,7 +531,7 @@ Current Novus projects in this ecosystem generally follow these conventions:
 
 1. use explicit integer sizes (`i32`, `i64`)
 2. prefer alias imports for larger libraries
-3. use `main.nov` as the package entrypoint
+3. use root `main.nov` as the entrypoint and keep larger app code in `src/`
 4. keep cross-platform branching in libraries via `#if`, not in app code when possible
 5. use explicit loops and explicit state rather than heavy abstraction
 
@@ -537,4 +540,3 @@ Current Novus projects in this ecosystem generally follow these conventions:
 - For a quicker introduction, go back to the [Language Tour](../guide/language-tour.md).
 - For real code, read the [Platformer walkthrough](../walkthroughs/platformer.md) and [Todo app walkthrough](../walkthroughs/todo-app.md).
 - For package surfaces, use the [Library Reference overview](library-reference.md).
-

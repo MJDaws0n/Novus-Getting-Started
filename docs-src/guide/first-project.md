@@ -15,11 +15,15 @@ That gives you a starter project with:
 my-app/
 ├── main.nov
 ├── libraries.conf
-└── lib/
-    └── std/
+├── lib/
+│   └── std/
+└── src/
+    └── app.nov
 ```
 
 `nox init` already pulls the standard library, so you can start writing code immediately.
+
+For a tiny app, keeping everything in `main.nov` is fine. Once the project grows, put the real code in `src/` and keep the root `main.nov` as a small loader that imports your app modules and calls into them.
 
 ## The starter file
 
@@ -86,6 +90,8 @@ fn main() -> i32 {
 }
 ```
 
+On a larger project, `greet` and the rest of your app code would usually move into `src/`, while `main.nov` stays at the root and just wires the imports together.
+
 ## What `libraries.conf` does
 
 Nox keeps your dependencies in `libraries.conf`.
@@ -126,4 +132,3 @@ import lib/window/main window;
 2. Forgetting to run `nox init` first.
 3. Editing code while an old `lib/` directory is still checked in from a previous package version.
 4. Mixing old and new import styles without checking the package entrypoint.
-

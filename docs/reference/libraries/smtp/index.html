@@ -1507,20 +1507,17 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import lib/smtp smtp;
 </code></pre></div>
 <h2 id="sending-mail">Sending mail<a class="headerlink" href="#sending-mail" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>smtp_send_email</code></li>
-<li><code>smtp_send_line</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fn smtp_send_email(host: str, port: i32, username: str, password: str, from_email: str, to_email: str, subject: str, body: str) -&gt; bool;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn smtp_send_line(fd: i32, line: str) -&gt; void;
+</code></pre></div>
 <h2 id="smtp-protocol-helpers">SMTP protocol helpers<a class="headerlink" href="#smtp-protocol-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>smtp_read_response</code></li>
-<li><code>smtp_response_code</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn smtp_read_response(fd: i32) -&gt; str;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fn smtp_response_code(response: str) -&gt; i32;
+</code></pre></div>
 <h2 id="utility-helpers">Utility helpers<a class="headerlink" href="#utility-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>base64_encode</code></li>
-<li><code>parse_ip_octet</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn base64_encode(input: str) -&gt; str;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fn parse_ip_octet(ip: str, index: i32) -&gt; i32;
+</code></pre></div>
 
 
 

@@ -1618,103 +1618,95 @@
 </code></pre></div>
 <p>This package is much broader than the others because it includes both high-level query helpers and lower-level packet/protocol utilities.</p>
 <h2 id="connection-and-session">Connection and session<a class="headerlink" href="#connection-and-session" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_connect</code></li>
-<li><code>mysql_connect_local</code></li>
-<li><code>mysql_close</code></li>
-<li><code>mysql_ping</code></li>
-<li><code>mysql_use_db</code></li>
-<li><code>mysql_server_version</code></li>
-<li><code>mysql_current_database</code></li>
-<li><code>mysql_current_user</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fn mysql_connect(a: i32, b: i32, c: i32, d: i32, port: i32, user: str, password: str, database: str) -&gt; i32;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn mysql_connect_local(port: i32, user: str, password: str, database: str) -&gt; i32;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>fn mysql_close(fd: i32) -&gt; void;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>fn mysql_ping(fd: i32) -&gt; bool;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>fn mysql_use_db(fd: i32, database: str) -&gt; str;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>fn mysql_server_version(fd: i32) -&gt; str;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>fn mysql_current_database(fd: i32) -&gt; str;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>fn mysql_current_user(fd: i32) -&gt; str;
+</code></pre></div>
 <h2 id="query-execution">Query execution<a class="headerlink" href="#query-execution" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_query</code></li>
-<li><code>mysql_exec</code></li>
-<li><code>mysql_query_scalar</code></li>
-<li><code>mysql_query_row</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fn mysql_query(fd: i32, sql: str) -&gt; str;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fn mysql_exec(fd: i32, sql: str) -&gt; bool;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>fn mysql_query_scalar(fd: i32, sql: str) -&gt; str;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>fn mysql_query_row(fd: i32, sql: str) -&gt; str;
+</code></pre></div>
 <h2 id="result-inspection">Result inspection<a class="headerlink" href="#result-inspection" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_is_error</code></li>
-<li><code>mysql_is_ok</code></li>
-<li><code>mysql_is_result_set</code></li>
-<li><code>mysql_error_msg</code></li>
-<li><code>mysql_error_code</code></li>
-<li><code>mysql_affected_rows</code></li>
-<li><code>mysql_insert_id</code></li>
-<li><code>mysql_num_cols</code></li>
-<li><code>mysql_num_rows</code></li>
-<li><code>mysql_col_name</code></li>
-<li><code>mysql_get</code></li>
-<li><code>mysql_is_null</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn mysql_is_error(result: str) -&gt; bool;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fn mysql_is_ok(result: str) -&gt; bool;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>fn mysql_is_result_set(result: str) -&gt; bool;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>fn mysql_error_msg(result: str) -&gt; str;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>fn mysql_error_code(result: str) -&gt; i32;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>fn mysql_affected_rows(result: str) -&gt; i64;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>fn mysql_insert_id(result: str) -&gt; i64;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>fn mysql_num_cols(result: str) -&gt; i32;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>fn mysql_num_rows(result: str) -&gt; i32;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>fn mysql_col_name(result: str, col: i32) -&gt; str;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>fn mysql_get(result: str, row: i32, col: i32) -&gt; str;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>fn mysql_is_null(result: str, row: i32, col: i32) -&gt; bool;
+</code></pre></div>
 <h2 id="escaping-and-quoting">Escaping and quoting<a class="headerlink" href="#escaping-and-quoting" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_escape</code></li>
-<li><code>mysql_quote</code></li>
-<li><code>mysql_escape_id</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>fn mysql_escape(s: str) -&gt; str;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>fn mysql_quote(s: str) -&gt; str;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>fn mysql_escape_id(s: str) -&gt; str;
+</code></pre></div>
 <h2 id="prepared-statements-and-parameters">Prepared statements and parameters<a class="headerlink" href="#prepared-statements-and-parameters" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_prepare</code></li>
-<li><code>mysql_params_new</code></li>
-<li><code>my_params_end</code></li>
-<li><code>mysql_bind_str</code></li>
-<li><code>mysql_bind_i32</code></li>
-<li><code>mysql_bind_null</code></li>
-<li><code>mysql_stmt_execute</code></li>
-<li><code>mysql_stmt_close</code></li>
-<li><code>mysql_stmt_reset</code></li>
-<li><code>mysql_set_param_str</code></li>
-<li><code>mysql_set_param_i32</code></li>
-<li><code>mysql_set_param_i64</code></li>
-<li><code>mysql_set_param_null</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fn mysql_prepare(fd: i32, sql: str) -&gt; i32;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>fn mysql_params_new(count: i32) -&gt; str;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fn my_params_end(params: str) -&gt; i32;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>fn mysql_bind_str(params: str, index: i32, value: str) -&gt; str;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>fn mysql_bind_i32(params: str, index: i32, value: i32) -&gt; str;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>fn mysql_bind_null(params: str, index: i32) -&gt; str;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>fn mysql_stmt_execute(fd: i32, stmt_id: i32, params: str, num_params: i32) -&gt; str;
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>fn mysql_stmt_close(fd: i32, stmt_id: i32) -&gt; void;
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>fn mysql_stmt_reset(fd: i32, stmt_id: i32) -&gt; bool;
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>fn mysql_set_param_str(sql: str, val: str) -&gt; str;
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>fn mysql_set_param_i32(sql: str, val: i32) -&gt; str;
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>fn mysql_set_param_i64(sql: str, val: i64) -&gt; str;
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>fn mysql_set_param_null(sql: str) -&gt; str;
+</code></pre></div>
 <h2 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_begin</code></li>
-<li><code>mysql_commit</code></li>
-<li><code>mysql_rollback</code></li>
-<li><code>mysql_autocommit_on</code></li>
-<li><code>mysql_autocommit_off</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fn mysql_begin(fd: i32) -&gt; str;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>fn mysql_commit(fd: i32) -&gt; str;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>fn mysql_rollback(fd: i32) -&gt; str;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>fn mysql_autocommit_on(fd: i32) -&gt; str;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>fn mysql_autocommit_off(fd: i32) -&gt; str;
+</code></pre></div>
 <h2 id="schema-and-discovery-helpers">Schema and discovery helpers<a class="headerlink" href="#schema-and-discovery-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mysql_list_databases</code></li>
-<li><code>mysql_list_tables</code></li>
-<li><code>mysql_table_exists</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>fn mysql_list_databases(fd: i32) -&gt; str;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>fn mysql_list_tables(fd: i32) -&gt; str;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>fn mysql_table_exists(fd: i32, table: str) -&gt; bool;
+</code></pre></div>
 <h2 id="packet-buffer-and-protocol-helpers">Packet, buffer, and protocol helpers<a class="headerlink" href="#packet-buffer-and-protocol-helpers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>my_to_i64</code></li>
-<li><code>my_to_i32</code></li>
-<li><code>my_buf_copy</code></li>
-<li><code>my_extract</code></li>
-<li><code>my_buf_set</code></li>
-<li><code>my_buf_get</code></li>
-<li><code>my_read_u16</code></li>
-<li><code>my_read_u32</code></li>
-<li><code>my_write_u16</code></li>
-<li><code>my_write_u24</code></li>
-<li><code>my_write_u32</code></li>
-<li><code>my_write_cstr</code></li>
-<li><code>my_read_cstr</code></li>
-<li><code>my_cstr_len</code></li>
-<li><code>my_read_lenenc_val</code></li>
-<li><code>my_lenenc_size</code></li>
-<li><code>my_read_exact</code></li>
-<li><code>mysql_read_packet</code></li>
-<li><code>mysql_write_packet</code></li>
-<li><code>my_pkt_len</code></li>
-<li><code>my_pkt_byte</code></li>
-<li><code>my_sep</code></li>
-<li><code>my_row_sep</code></li>
-<li><code>my_null_marker</code></li>
-<li><code>my_parse_ok</code></li>
-<li><code>my_parse_err</code></li>
-</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>fn my_to_i64(x: i32) -&gt; i64;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>fn my_to_i32(x: i64) -&gt; i32;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>fn my_buf_copy(dst: str, dst_off: i32, src: str, src_off: i32, count: i32) -&gt; void;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>fn my_extract(src: str, off: i32, count: i32) -&gt; str;
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>fn my_buf_set(dst: str, off: i32, val: i32) -&gt; void;
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>fn my_buf_get(src: str, off: i32) -&gt; i32;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>fn my_read_u16(buf: str, off: i32) -&gt; i32;
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>fn my_read_u32(buf: str, off: i32) -&gt; i64;
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>fn my_write_u16(buf: str, off: i32, val: i32) -&gt; void;
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>fn my_write_u24(buf: str, off: i32, val: i32) -&gt; void;
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>fn my_write_u32(buf: str, off: i32, val: i64) -&gt; void;
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>fn my_write_cstr(buf: str, off: i32, s: str) -&gt; i32;
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>fn my_read_cstr(buf: str, off: i32) -&gt; str;
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>fn my_cstr_len(buf: str, off: i32) -&gt; i32;
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>fn my_read_lenenc_val(buf: str, off: i32) -&gt; i64;
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>fn my_lenenc_size(buf: str, off: i32) -&gt; i32;
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>fn my_read_exact(fd: i32, length: i32) -&gt; str;
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>fn mysql_read_packet(fd: i32) -&gt; str;
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>fn mysql_write_packet(fd: i32, seq: i32, data: str, data_len: i32) -&gt; void;
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>fn my_pkt_len(pkt: str) -&gt; i32;
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>fn my_pkt_byte(pkt: str, off: i32) -&gt; i32;
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>fn my_sep() -&gt; str;
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>fn my_row_sep() -&gt; str;
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>fn my_null_marker() -&gt; str;
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>fn my_parse_ok(pkt: str) -&gt; str;
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>fn my_parse_err(pkt: str) -&gt; str;
+</code></pre></div>
 
 
 

@@ -10,22 +10,27 @@ import lib/env env;
 
 ## Identity and environment
 
-- `get_username`
-- `get_home_dir`
-- `getenv`
-- `gethostname`
-- `getcwd`
+```novus
+fn get_username() -> str;
+fn get_home_dir() -> str;
+fn getenv(name: str) -> str;
+fn gethostname() -> str;
+fn getcwd() -> str;
+```
 
 ## Process and user IDs
 
-- `getpid`
-- `getppid`
-- `getuid`
-- `geteuid`
+```novus
+fn getpid() -> i32;
+fn getppid() -> i32;
+fn getuid() -> i32;
+fn geteuid() -> i32;
+```
 
 ## Platform information
 
-- `get_arch`
-- `get_os_name`
-- `get_os_version`
-
+```novus
+fn get_arch() -> str;
+fn get_os_name() -> str;
+fn get_os_version() -> str;
+```

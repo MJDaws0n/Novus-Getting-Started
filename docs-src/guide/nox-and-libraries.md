@@ -50,6 +50,27 @@ import lib/file_io fio;
 import lib/window/main window;
 ```
 
+## Recommended app layout
+
+For larger applications, keep the repository root simple and move most code into `src/`:
+
+```text
+my-app/
+├── main.nov
+├── libraries.conf
+├── lib/
+│   └── std/
+└── src/
+    ├── app.nov
+    └── features/
+```
+
+The usual pattern is:
+
+- root `main.nov` stays small
+- `main.nov` imports files from `src/`
+- feature code lives in `src/` subfolders
+
 ## Updating projects safely
 
 If a project starts throwing strange errors after a package ecosystem change, check:
@@ -60,24 +81,8 @@ If a project starts throwing strange errors after a package ecosystem change, ch
 
 That specific problem appears often when older projects keep package directories checked into git.
 
-## What a package should contain
+## Library layout
 
-At minimum:
+Application layout and library layout are slightly different.
 
-```text
-my-lib/
-├── main.nov
-├── VERSION
-├── libraries.conf
-└── docs.md
-```
-
-If the library is platform-specific, a structured layout is cleaner:
-
-```text
-platforms/
-├── darwin/
-├── linux/
-└── windows/
-```
-
+For libraries, keep using the dedicated guidance in [Authoring libraries](../reference/library-authoring.md). That page covers the public `main.nov` loader, `VERSION`, `docs.md`, tests, and platform folders.
