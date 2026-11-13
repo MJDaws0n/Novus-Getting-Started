@@ -243,6 +243,68 @@ let sum: i32 = add(10, 20);
 show("ready");
 ```
 
+## Classes
+
+Declare a class at module scope. A class can have fields, methods, and constructors. A constructor uses `init` and runs when you call `new`.
+
+```novus
+class Ball {
+    priv let x: i32;
+    pub let radius: i32 = 50;
+    priv static let created: i32 = 0;
+
+    pub init(start_x: i32) {
+        self.x = start_x;
+        Ball.created += 1;
+    }
+
+    pub fn move(dx: i32) -> void {
+        self.x += dx;
+    }
+
+    pub fn position() -> i32 {
+        return self.x;
+    }
+
+    pub static fn count() -> i32 {
+        return Ball.created;
+    }
+}
+
+fn main() -> i32 {
+    let ball: Ball = new Ball(10);
+    let same_ball: Ball = ball;
+    same_ball.move(5);
+    ball.radius = 40;
+
+    if (ball.position() == 15 && Ball.count() == 1) {
+        return 0;
+    }
+    return 1;
+}
+```
+
+- Class members are private by default. Use `pub` to allow access from other code and `priv` to spell out private visibility. Private access is scoped to the class, including when a method works with another instance of that class.
+- Instance fields are allocated per object. Assigning, passing, or returning an object shares the same instance. Comparing two instances of the same class with `==` or `!=` compares their identity.
+- Instance methods and constructors have `self`. Use `Class.member` for static fields and methods. Static fields are shared and initialized once at program startup.
+- Fields are initialized in declaration order before `init` runs. Fields without an initializer start at zero, with empty strings and arrays for those types. Initialize class-valued fields before using their members.
+- Constructors and methods can be overloaded by parameter type. Use a public constructor to allow construction from outside the class. A class with no declared constructor has a public zero-argument constructor.
+
+### Importing classes
+
+```novus
+import lib/geometry geo;
+import lib/other[Ball] other;
+
+fn main() -> i32 {
+    let ball: geo.Ball = new geo.Ball(10);
+    let another: other.Ball = new other.Ball();
+    return 0;
+}
+```
+
+Use the class name directly after an unaliased import. Selective imports can list functions and classes together. Each file has its own class imports. Two files can define the same class name and be imported under different aliases. A duplicate visible class name is a compile error. Importing the same class through two aliases preserves its type identity and shared static fields.
+
 ## Control flow
 
 ### `if`, `else if`, `else`

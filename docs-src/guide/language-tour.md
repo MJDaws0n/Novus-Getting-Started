@@ -57,6 +57,32 @@ fn label(value: str) -> str {
 }
 ```
 
+## Classes
+
+Use a class to keep fields and the functions that work on them together.
+
+```novus
+class Counter {
+    priv let count: i32 = 0;
+
+    pub fn increment() -> void {
+        self.count++;
+    }
+
+    pub fn value() -> i32 {
+        return self.count;
+    }
+}
+
+fn main() -> i32 {
+    let counter: Counter = new Counter();
+    counter.increment();
+    return counter.value() - 1;
+}
+```
+
+See [Classes in the syntax reference](../reference/syntax-reference.md#classes) for constructors, visibility, static members, and class imports.
+
 ## Conditionals
 
 ```novus
