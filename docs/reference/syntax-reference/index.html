@@ -973,6 +973,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#control-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2219,6 +2247,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#control-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2831,22 +2887,77 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>let sum: i32 = add(10, 20);
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>show(&quot;ready&quot;);
 </code></pre></div>
+<h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
+<p>Declare a class at module scope. A class can have fields, methods, and constructors. A constructor uses <code>init</code> and runs when you call <code>new</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>class Ball {
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    priv let x: i32;
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    pub let radius: i32 = 50;
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    priv static let created: i32 = 0;
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    pub init(start_x: i32) {
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>        self.x = start_x;
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>        Ball.created += 1;
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    }
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>    pub fn move(dx: i32) -&gt; void {
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>        self.x += dx;
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>    }
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>    pub fn position() -&gt; i32 {
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>        return self.x;
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>    }
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>    pub static fn count() -&gt; i32 {
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>        return Ball.created;
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>    }
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>}
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>fn main() -&gt; i32 {
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>    let ball: Ball = new Ball(10);
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a>    let same_ball: Ball = ball;
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>    same_ball.move(5);
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a>    ball.radius = 40;
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a>
+<a id="__codelineno-23-30" name="__codelineno-23-30" href="#__codelineno-23-30"></a>    if (ball.position() == 15 &amp;&amp; Ball.count() == 1) {
+<a id="__codelineno-23-31" name="__codelineno-23-31" href="#__codelineno-23-31"></a>        return 0;
+<a id="__codelineno-23-32" name="__codelineno-23-32" href="#__codelineno-23-32"></a>    }
+<a id="__codelineno-23-33" name="__codelineno-23-33" href="#__codelineno-23-33"></a>    return 1;
+<a id="__codelineno-23-34" name="__codelineno-23-34" href="#__codelineno-23-34"></a>}
+</code></pre></div>
+<ul>
+<li>Class members are private by default. Use <code>pub</code> to allow access from other code and <code>priv</code> to spell out private visibility. Private access is scoped to the class, including when a method works with another instance of that class.</li>
+<li>Instance fields are allocated per object. Assigning, passing, or returning an object shares the same instance. Comparing two instances of the same class with <code>==</code> or <code>!=</code> compares their identity.</li>
+<li>Instance methods and constructors have <code>self</code>. Use <code>Class.member</code> for static fields and methods. Static fields are shared and initialized once at program startup.</li>
+<li>Fields are initialized in declaration order before <code>init</code> runs. Fields without an initializer start at zero, with empty strings and arrays for those types. Initialize class-valued fields before using their members.</li>
+<li>Constructors and methods can be overloaded by parameter type. Use a public constructor to allow construction from outside the class. A class with no declared constructor has a public zero-argument constructor.</li>
+</ul>
+<h3 id="importing-classes">Importing classes<a class="headerlink" href="#importing-classes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>import lib/geometry geo;
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>import lib/other[Ball] other;
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>fn main() -&gt; i32 {
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>    let ball: geo.Ball = new geo.Ball(10);
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>    let another: other.Ball = new other.Ball();
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>    return 0;
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>}
+</code></pre></div>
+<p>Use the class name directly after an unaliased import. Selective imports can list functions and classes together. Each file has its own class imports. Two files can define the same class name and be imported under different aliases. A duplicate visible class name is a compile error. Importing the same class through two aliases preserves its type identity and shared static fields.</p>
 <h2 id="control-flow">Control flow<a class="headerlink" href="#control-flow" title="Permanent link">&para;</a></h2>
 <h3 id="if-else-if-else"><code>if</code>, <code>else if</code>, <code>else</code><a class="headerlink" href="#if-else-if-else" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>if (score &gt; 100) {
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    print(&quot;high&quot;);
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>} else if (score &gt; 50) {
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    print(&quot;mid&quot;);
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>} else {
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    print(&quot;low&quot;);
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>if (score &gt; 100) {
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    print(&quot;high&quot;);
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>} else if (score &gt; 50) {
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    print(&quot;mid&quot;);
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>} else {
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>    print(&quot;low&quot;);
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>}
 </code></pre></div>
 <h3 id="while"><code>while</code><a class="headerlink" href="#while" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>let i: i32 = 0;
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>while (i &lt; 10) {
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    print(i32_to_str(i));
-<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    i += 1;
-<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>let i: i32 = 0;
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>while (i &lt; 10) {
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    print(i32_to_str(i));
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    i += 1;
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>}
 </code></pre></div>
 <p>Current examples rely heavily on <code>while</code>.</p>
 <h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h2>
@@ -2880,20 +2991,20 @@
 <li><code>|</code></li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>if ((input_mask &amp; window.wm_input_quit()) != 0) {
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    app_running = 0;
-<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>if ((input_mask &amp; window.wm_input_quit()) != 0) {
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    app_running = 0;
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>}
 </code></pre></div>
 <h2 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h2>
 <p>Strings are used heavily across the ecosystem.</p>
 <h3 id="concatenation">Concatenation<a class="headerlink" href="#concatenation" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>let msg: str = &quot;Hello &quot; + name;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>let msg: str = &quot;Hello &quot; + name;
 </code></pre></div>
 <h3 id="indexing">Indexing<a class="headerlink" href="#indexing" title="Permanent link">&para;</a></h3>
 <p>Projects index strings directly:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>if (line[i] == &#39; &#39;) {
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    ...
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>if (line[i] == &#39; &#39;) {
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    ...
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>}
 </code></pre></div>
 <h3 id="common-string-patterns">Common string patterns<a class="headerlink" href="#common-string-patterns" title="Permanent link">&para;</a></h3>
 <p>You will often see:</p>
@@ -2907,55 +3018,55 @@
 <p>Some of these are builtin patterns, others come from <code>std</code>.</p>
 <h2 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h2>
 <h3 id="declaration">Declaration<a class="headerlink" href="#declaration" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>let xs: []i32 = [10, 20, 30];
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>let xs: []i32 = [10, 20, 30];
 </code></pre></div>
 <h3 id="indexing_1">Indexing<a class="headerlink" href="#indexing_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>let first: i32 = xs[0];
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>let first: i32 = xs[0];
 </code></pre></div>
 <h3 id="append">Append<a class="headerlink" href="#append" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>array_append(xs, 40);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>array_append(xs, 40);
 </code></pre></div>
 <h3 id="empty-arrays">Empty arrays<a class="headerlink" href="#empty-arrays" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>let names: []str = [];
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>let names: []str = [];
 </code></pre></div>
 <h2 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link">&para;</a></h2>
 <p>Common import forms:</p>
 <h3 id="alias-import">Alias import<a class="headerlink" href="#alias-import" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>import lib/std std;
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>import lib/window/main window;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>import lib/std std;
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>import lib/window/main window;
 </code></pre></div>
 <h3 id="unaliased-import">Unaliased import<a class="headerlink" href="#unaliased-import" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>import lib/std;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>import lib/std;
 </code></pre></div>
 <p>That brings exported names directly into the current module.</p>
 <h3 id="package-entrypoints">Package entrypoints<a class="headerlink" href="#package-entrypoints" title="Permanent link">&para;</a></h3>
 <p>Modern Novus libraries usually expose a stable <code>main.nov</code> loader. That is why imports such as these are common:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>import lib/process/main process;
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>import lib/file_io fio;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>import lib/process/main process;
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>import lib/file_io fio;
 </code></pre></div>
 <h2 id="conditional-compilation">Conditional compilation<a class="headerlink" href="#conditional-compilation" title="Permanent link">&para;</a></h2>
 <p>Novus uses <code>#if(...)</code> to include platform-specific code at compile time.</p>
 <h3 id="os-selection">OS selection<a class="headerlink" href="#os-selection" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>#if(os == &quot;darwin&quot;) {
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    import platforms/darwin/arm64;
-<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>}
-<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
-<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>#if(os == &quot;linux&quot;) {
-<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>    import platforms/linux/common;
-<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>}
-<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
-<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>#if(os == &quot;windows&quot;) {
-<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>    import platforms/windows/common;
-<a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>#if(os == &quot;darwin&quot;) {
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    import platforms/darwin/arm64;
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>}
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>#if(os == &quot;linux&quot;) {
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>    import platforms/linux/common;
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>}
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>#if(os == &quot;windows&quot;) {
+<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>    import platforms/windows/common;
+<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>}
 </code></pre></div>
 <h3 id="architecture-selection">Architecture selection<a class="headerlink" href="#architecture-selection" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>#if(arch == &quot;arm64&quot;) {
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    import arm64;
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>}
-<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>
-<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>#if(arch == &quot;amd64&quot;) {
-<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>    import amd64;
-<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>#if(arch == &quot;arm64&quot;) {
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>    import arm64;
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>}
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>#if(arch == &quot;amd64&quot;) {
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>    import amd64;
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>}
 </code></pre></div>
 <p>The most common conditions in the current ecosystem are:</p>
 <ul>
@@ -2982,45 +3093,45 @@
 <p>These do not require imports.</p>
 <h2 id="low-level-syntax">Low-level syntax<a class="headerlink" href="#low-level-syntax" title="Permanent link">&para;</a></h2>
 <p>Low-level Novus libraries use register operations directly:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>mov(x0, fd);
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>mov(x1, ptr(buf));
-<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>mov(x2, len(buf));
-<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>mov(x16, 0x2000000 + 4);
-<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>syscall();
-<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>let rc: u64 = getreg(x0);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>mov(x0, fd);
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>mov(x1, ptr(buf));
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>mov(x2, len(buf));
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>mov(x16, 0x2000000 + 4);
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>syscall();
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>let rc: u64 = getreg(x0);
 </code></pre></div>
 <p>Windows-specific wrappers often use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>win_call(&quot;ExitProcess&quot;, 0);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>win_call(&quot;ExitProcess&quot;, 0);
 </code></pre></div>
 <h2 id="program-entrypoints">Program entrypoints<a class="headerlink" href="#program-entrypoints" title="Permanent link">&para;</a></h2>
 <p>You will see two main styles:</p>
 <h3 id="simple-program">Simple program<a class="headerlink" href="#simple-program" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>fn main() -&gt; i32 {
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    return 0;
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>fn main() -&gt; i32 {
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>    return 0;
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>}
 </code></pre></div>
 <h3 id="cli-program">CLI program<a class="headerlink" href="#cli-program" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>fn main(argc: i32, argv: u64) -&gt; i32 {
-<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>    if (argc &lt;= 1) {
-<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>        return 1;
-<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>    }
-<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>    return 0;
-<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>fn main(argc: i32, argv: u64) -&gt; i32 {
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>    if (argc &lt;= 1) {
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>        return 1;
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>    }
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>    return 0;
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>}
 </code></pre></div>
 <h2 id="cli-usage">CLI usage<a class="headerlink" href="#cli-usage" title="Permanent link">&para;</a></h2>
 <p>Typical compiler command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>novus<span class="w"> </span>main.nov
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>novus<span class="w"> </span>main.nov
 </code></pre></div>
 <p>Cross-compile:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>novus<span class="w"> </span>--target<span class="o">=</span>linux/amd64<span class="w"> </span>main.nov
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>novus<span class="w"> </span>--target<span class="o">=</span>linux/amd64<span class="w"> </span>main.nov
 </code></pre></div>
 <p>Build artifacts are written into <code>build/&lt;target&gt;/</code>.</p>
 <h2 id="nox-project-syntax-in-practice">Nox project syntax in practice<a class="headerlink" href="#nox-project-syntax-in-practice" title="Permanent link">&para;</a></h2>
 <p>Typical project flow:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>nox<span class="w"> </span>init<span class="w"> </span>my-project
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="nb">cd</span><span class="w"> </span>my-project
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>nox<span class="w"> </span>pull<span class="w"> </span>window
-<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>novus<span class="w"> </span>main.nov
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>nox<span class="w"> </span>init<span class="w"> </span>my-project
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="nb">cd</span><span class="w"> </span>my-project
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>nox<span class="w"> </span>pull<span class="w"> </span>window
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>novus<span class="w"> </span>main.nov
 </code></pre></div>
 <p>That gives you:</p>
 <ul>
